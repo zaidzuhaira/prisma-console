@@ -1,0 +1,11 @@
+node_modules/
+.env
+*.log
+dist/
+.DS_Store
+.vscode/
+coverage/
+.next/
+build/
+*.lock
+package-lock.json

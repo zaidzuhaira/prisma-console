@@ -1,0 +1,56 @@
+{
+  "name": "prisma-console",
+  "version": "1.0.1",
+  "description": "An enhanced interactive Prisma database console with Rails-like features",
+  "main": "prismaConsole.js",
+  "bin": {
+    "prisma-console": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node prismaConsole.js"
+  },
+  "keywords": [
+    "prisma",
+    "cli",
+    "console",
+    "database",
+    "orm",
+    "repl",
+    "rails"
+  ],
+  "files": [
+    "bin/",
+    "prismaConsole.js",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/prisma-console.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/prisma-console/issues"
+  },
+  "homepage": "https://github.com/yourusername/prisma-console#readme",
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.0.0",
+    "chalk": "^4.1.2",
+    "date-fns": "^2.30.0",
+    "lodash": "^4.17.21",
+    "pretty-error": "^4.0.0",
+    "prisma": "^5.0.0",
+    "repl": "^0.1.3",
+    "repl.history": "^0.1.4",
+    "util": "^0.12.5"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
