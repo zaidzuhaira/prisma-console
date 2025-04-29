@@ -5,7 +5,7 @@ A Rails-inspired interactive console for Prisma ORM that provides a powerful REP
 ## Features
 
 ✨ **Rails-like Experience**
-- Direct model access without prisma prefix
+- Direct model access
 - Interactive query execution
 - Command history support
 - Tab completion
