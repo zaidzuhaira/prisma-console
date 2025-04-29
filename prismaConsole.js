@@ -140,24 +140,14 @@ Examples:
       process.exit();
     });
 
-    // Add command history
-    require('repl.history')(replServer, process.env.HOME + '/.node_repl_history');
-
-    // Add error handling
-    replServer.on('error', (err) => {
-      console.error(chalk.red('Error:'), err.message);
-    });
-
-    // Handle uncaught promise rejections
-    process.on('unhandledRejection', (err) => {
-      console.error(chalk.red('Unhandled Promise Rejection:'), err.message);
-    });
-
     return replServer;
   }
 }
 
+// Export the PrismaConsole class
 module.exports = PrismaConsole;
+
+// Factory function to create a new PrismaConsole instance
 module.exports.createConsole = (prismaClient) => {
   return new PrismaConsole(prismaClient);
 };
