@@ -123,7 +123,6 @@ Contributions are welcome! Here's how you can help:
 ### Development Guidelines
 
 - Follow existing code style
-- Add tests for new features
 - Update documentation as needed
 - Keep pull requests focused on single features/fixes
 
