@@ -9,7 +9,7 @@ async function start() {
     const prisma = new PrismaClient();
     await prisma.$connect();
     
-    const prismaConsole = PrismaConsole.createConsole(prisma);
+    const prismaConsole = new PrismaConsole(prisma);
     await prismaConsole.start();
   } catch (error) {
     console.error('Failed to start Prisma Console:', error.message);
