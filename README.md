@@ -1,10 +1,11 @@
 # Prisma Console
 
-A Rails-inspired interactive console for Prisma ORM with full CRUD operations support and a friendly command-line interface.
+A Rails-inspired interactive console for Prisma ORM that runs in your project context, similar to the Prisma CLI.
 
 ## Features
 
 - Rails-like model access (User.findMany() instead of prisma.user.findMany())
+- Uses your project's Prisma schema and configuration
 - Helper methods like `first()`, `last()`, `where()`
 - Pretty printing with `pp()`
 - Multi-line input support
@@ -14,27 +15,41 @@ A Rails-inspired interactive console for Prisma ORM with full CRUD operations su
 - Lodash utilities via `_`
 - Date formatting via `format()`
 
-## Installation & Usage
+## Installation
 
-You can use this package in multiple ways:
+Add to your Prisma project:
 
-### Using npx (no installation required)
-```bash
-npx prisma-console
-```
-
-### Global Installation
-```bash
-npm install -g prisma-console
-prisma-console
-```
-
-### Local Project Installation
 ```bash
 npm install prisma-console
 ```
 
-## Usage Examples
+## Usage
+
+After installing in your Prisma project:
+
+```bash
+npx prisma-console
+```
+
+Or add a script to your package.json:
+```json
+{
+  "scripts": {
+    "console": "prisma-console"
+  }
+}
+```
+
+Then run:
+```bash
+npm run console
+```
+
+The console will automatically:
+1. Find your Prisma schema
+2. Use your project's database configuration
+3. Load your models and their relationships
+4. Provide Rails-like helpers for your models
 
 ### Direct Model Access
 ```javascript
@@ -96,7 +111,10 @@ User.findMany({
 ## Requirements
 
 - Node.js >= 14.0.0
-- A valid Prisma project with schema
+- A Prisma project with:
+  - Valid schema.prisma file
+  - Generated Prisma Client
+  - Configured database connection
 
 ## License
 
