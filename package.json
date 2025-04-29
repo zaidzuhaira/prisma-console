@@ -1,6 +1,6 @@
 {
   "name": "prisma-console",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A Rails-inspired interactive console for Prisma ORM with project-scoped functionality",
   "main": "prismaConsole.js",
   "bin": {
